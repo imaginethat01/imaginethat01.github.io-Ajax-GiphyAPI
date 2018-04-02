@@ -1,5 +1,5 @@
 
-.jumbotron { background-color: #88b745;}
+.jumbotron { background-color: transparent;}
 
 
 body {
@@ -12,6 +12,15 @@ body {
         overflow-x: auto;
         overflow-y: auto;   }
 
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+         }
 
 .btn-1 {
     background-color: #333; /* Green background */
@@ -35,7 +44,6 @@ body {
  
 
   #gifArea { 
-  
     overflow: auto;
     width: 600px;
     height: 500px;
