@@ -75,11 +75,13 @@ body {
 
 h1 { font-size: 2.5em;
     font-family: 'Press Start 2P', cursive;
-    color: black;   
+    color: black;
+    font-weight: bolder;   
   } 
     
     p { font-size: 1.2em;
         font-family: 'Gloria Hallelujah', cursive;
         color: black;
+        font-weight: bold; 
     }
     
