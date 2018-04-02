@@ -11,26 +11,6 @@ body {
         overflow-x: hidden;
         overflow-y: hidden;   }
 
-.container-0 { 
-position: relative; 
-    left: 40%;
-
-}
-
-.container-1 { 
-position: relative; 
-    left: 60%;
-    bottom: 75%; 
-    max-width: 500px;
-
-} 
-    
-.container-2 {
-position: relative; 
-    left: 10%; 
-    top: 5%;
-} 
-    
 
 .btn-1 {
     background-color: #333; /* Green background */
@@ -38,7 +18,7 @@ position: relative;
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
-    width: 50%; /* Set a width if needed */
+    width: 150px; /* Set a width if needed */
     display: inline-flex; /* Make the buttons appear below each other */
 }
 
@@ -58,7 +38,8 @@ position: relative;
     overflow: auto;
     width: 600px;
     height: 500px;
- 
+    position: relative; 
+        right: 66%;
     }
 
     ::-webkit-scrollbar {
