@@ -4,12 +4,13 @@
 
 body {
     background-image: url('gameboi.png');
+    background-color: #88b745; 
         max-height: 100%;
         max-width: 100%; 
         background-repeat: no-repeat;
         background-size: cover;
-        overflow-x: hidden;
-        overflow-y: hidden;   }
+        overflow-x: auto;
+        overflow-y: auto;   }
 
 
 .btn-1 {

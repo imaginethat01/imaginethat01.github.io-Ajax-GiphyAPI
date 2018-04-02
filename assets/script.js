@@ -4,7 +4,7 @@ $(document).ready(function() {
   var sample = document.getElementById("foobar");
   sample.play();
 
-  var topics = ['Zelda', 'Mario', 'StarFox'];
+  var topics = ['Zelda', 'Mario', 'StarFox', 'Pokemon'];
   
 
      function displayAllResults() {
