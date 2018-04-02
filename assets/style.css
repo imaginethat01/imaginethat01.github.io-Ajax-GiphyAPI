@@ -71,3 +71,15 @@ body {
 ::-webkit-scrollbar-thumb:hover  {
         background: #333; 
     }
+
+
+h1 { font-size: 2.5em;
+    font-family: 'Press Start 2P', cursive;
+    color: black;   
+  } 
+    
+    p { font-size: 1.2em;
+        font-family: 'Gloria Hallelujah', cursive;
+        color: black;
+    }
+    
