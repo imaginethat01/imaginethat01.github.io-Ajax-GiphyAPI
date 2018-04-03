@@ -1,5 +1,6 @@
 
-$(document).ready(function() {
+$(document).ready(function(event) {
+
 
   var sample = document.getElementById("foobar");
   sample.play();
@@ -7,14 +8,10 @@ $(document).ready(function() {
   var topics = ['Zelda', 'Mario', 'StarFox', 'Pokemon'];
   
 
-     function displayAllResults() {
-  
+    function displayAllResults() {
+      
     var x = $(this).data("search");
-    console.log(x);
-  
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=dc6zaTOxFJmzC";
-  
-    console.log(queryURL);
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=ForAKN8XmnrQclaePoKcGRq0hCL0l3Nj&limit=20";
   
     $.ajax({
             url: queryURL,
@@ -24,9 +21,7 @@ $(document).ready(function() {
             console.log(results);
             $("#gifArea").empty();
             for (var i = 0; i < results.length; i++) {
-            
             var displayDiv = $("<div class='col-md-4'>");
-  
             var rating = results[i].rating;
             var defaultAnimatedSrc = results[i].images.fixed_height.url;
             var staticSrc = results[i].images.fixed_height_still.url;
@@ -46,21 +41,17 @@ $(document).ready(function() {
     });
   }
   
-  
     $("#addItem").on("click", function(event) {
-          event.preventDefault();
-          var newItem = $("#userInput").val().trim();
-          topics.push(newItem);
-          console.log(topics);
-          $("#userInput").val('');
-         
-          displayButtons();
+      event.preventDefault();
+      var newItem = $("#userInput").val().trim();
+        $("#userInput").val(newItem);
+        topics.push(newItem);
+        console.log(topics); 
+        displayButtons(); 
+
         });
  
- 
-  
-    
-    function displayButtons() {
+    function displayButtons(event) {
       $("#myButtons").empty();
       for (var i = 0; i < topics.length; i++) {
         var a = $('<button class="btn-1">');
@@ -71,15 +62,13 @@ $(document).ready(function() {
       }
     }
   
-  
     displayButtons();
 
     $(document).on("click", "#item", displayAllResults);
   
     $(document).on("click", ".datGiphy", pausePlayGifs);
   
-
-    function pausePlayGifs() {
+    function pausePlayGifs(event) {
        var state = $(this).attr("data-state");
         if (state === "still") {
           $(this).attr("src", $(this).attr("data-animate"));
@@ -91,3 +80,6 @@ $(document).ready(function() {
   }
   
   });
+
+
+ 
